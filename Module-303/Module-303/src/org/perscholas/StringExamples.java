@@ -1,5 +1,7 @@
 package org.perscholas;
 
+import java.util.StringJoiner;
+
 public class StringExamples {
     public static void main(String[] args) {
         // total length of string is 6 characters
@@ -21,7 +23,7 @@ public class StringExamples {
 
         System.out.println(s.charAt(0)); // will give single print a
         System.out.println(s.charAt(5)); // this will print f
-       // System.out.println(s.charAt(6)); // there is no position 6 - 0 based indexing
+        // System.out.println(s.charAt(6)); // there is no position 6 - 0 based indexing
 
         String r = "abc123abc";
         //replace a with z
@@ -38,12 +40,12 @@ public class StringExamples {
         String filename = "someimage.jpg";
 
         // this goes from position 0 to position 4 but does not include position 4
-        System.out.println(filename.substring(0,4));
+        System.out.println(filename.substring(0, 4));
 
-        System.out.println(filename.substring(1,5));
+        System.out.println(filename.substring(1, 5));
 
         //when we use a single argument with substring it is simply the starting position ,and it will take the rest of the string
-        System.out.println(filename.substring( 4));
+        System.out.println(filename.substring(4));
 
         // we want to print out index of . in the string
         //indexOf fins first occurrence of wtv you're looking for
@@ -54,17 +56,17 @@ public class StringExamples {
         //this can also be tought of search from the left to right instead of right to left
         System.out.println(filename.substring(filename.lastIndexOf(".")));
 
-        System.out.print(filename.substring(0,9));
+        System.out.print(filename.substring(0, 9));
 
         //Challenge ... how do I get just the filename without the extension
-        System.out.println(filename.substring(0,filename.lastIndexOf(".")));
+        System.out.println(filename.substring(0, filename.lastIndexOf(".")));
 
         //!!! VERY IMPORTANT NOTE
         //this will not work properly
         String s1 = new String("abc");
         String s2 = new String("abc");
         //ALWAYS WRONG - this is never correct for strings
-        System.out.println( s1 == s2 );// this will print false because they are different memory location
+        System.out.println(s1 == s2);// this will print false because they are different memory location
 
         //ALWAYS the correct way to correct for stings
         System.out.println(s1.equals(s2)); // this will show true
@@ -91,7 +93,7 @@ public class StringExamples {
         // then it concatination on the string s5 when creates yet another new string in memory that is assigned to variables s6
         String s6 = s4.toUpperCase() + s5;
 
-        //*** String Buffer *****// better for memory management
+        //*** String Buffer *****// better for memory management KPA QUESTION
 
         //The StringBuffer is mutable - same effect as concat
         //when doing lots of string manipulation is a high volume system
@@ -99,11 +101,53 @@ public class StringExamples {
 
         //append will add something to the end of the string and it has the same effect as concat for strings
         //these 2 lines of code are the equivalent of doing "abc"
+        //appending is adding something to the end
+
+        //0213456789
+        //abc1xyz23
         sb.append("abc");
         sb.append("123");
 
+        //this will insert at position 4
+        sb.insert(4, "xyz");
+
+        //replace function for String Buffer
+        // start at position 0 and got position 3 (but not include position 3)
+
+
+        //maybe it easier to think about replace as 2 operations
+        //operation 1) starting at position 0 and going to postion 3 be deleted
+        //operation 2) starting at position 0 and the string will be inserted
+        //starting at postiion 0 to position 3 is 3 characters that will be essentially deleted
+        sb.replace(0, 3, "ABCDEF");
+
+        sb.delete(0, 3);
+
+        sb.reverse();
+
+        //***THIS IS ON KPA****//
+        //StringBuffer
+        StringBuffer kba = new StringBuffer("ABC");
+        kba.replace(0, 7, "DEFG").insert(0, "12345");
+        kba.reverse();
+        kba.delete(0, 5);
+        //THIS IS ON KPA
         System.out.println(sb.toString());
 
-        }
+        //**** String Joiner ****//
+        //String Joiner// Another KPA question // MEMORIZE THEN FORGET
+
+        StringJoiner sj1 = new StringJoiner(",", "{", "}");//This is for csv file maybe kind not needed
+        StringJoiner sj2 = new StringJoiner(":", "[", "]");
+        sj1.add("Eric");
+        sj1.add("Jessica");
+        sj2.add("Jeff");
+        sj2.add("Kiet");
+
+        System.out.println(sj1);
+        System.out.println(sj2);
+
+        System.out.println(sj1.merge(sj2).toString());
     }
 }
+
