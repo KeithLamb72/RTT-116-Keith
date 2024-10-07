@@ -1,5 +1,6 @@
 package org.perscholas;
 
+import java.text.DecimalFormat;
 import java.util.StringJoiner;
 
 public class StringExamples {
@@ -94,7 +95,8 @@ public class StringExamples {
         String s6 = s4.toUpperCase() + s5;
 
         //*** String Buffer *****// better for memory management KPA QUESTION
-
+        //WHY USE STRING BUFFER
+        // for memory management and the string is immutable
         //The StringBuffer is mutable - same effect as concat
         //when doing lots of string manipulation is a high volume system
         StringBuffer sb = new StringBuffer();
@@ -148,6 +150,40 @@ public class StringExamples {
         System.out.println(sj2);
 
         System.out.println(sj1.merge(sj2).toString());
+
+        //** Formatting **/
+
+        //  int i = 1024;
+        //   byte b = 127;
+        //double d = 1.232, tiny = d / 1000000.0;
+        // boolean bool = true;
+        // System.out.format("");
+
+
+        //*******DECIMAL FORMATTING//-- used alot during monetary
+
+        //it takes in a patter
+        String pattern = "##_###_###_##";
+        double number = 123456789.123;
+
+        DecimalFormat numberFormat = new DecimalFormat(pattern);
+        System.out.println(numberFormat.format(number));
+
+
+        // ****** TRIM ******
+
+        String t = "   abc123   ";
+        System.out.println("->" + t + "<-");
+        System.out.println("->" + t.trim() + "<-");
+
+        // **** Split ****
+
+        String vowels = "a,e,i,o,u";
+
+        String[] result = vowels.split(":");
+
+        System.out.println(result);
+
     }
 }
 
