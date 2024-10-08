@@ -1,7 +1,7 @@
 package Homework;
 import java.util.Scanner;
 
-public class GLAB_303_3_2 {
+public class PA_303_2_2 {
     public static void main(String[] args) {
 
         // Scanner

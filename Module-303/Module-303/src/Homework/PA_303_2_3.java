@@ -2,106 +2,151 @@ package Homework;
 
 public class PA_303_2_3 {
     public static void main(String[] args) {
+        // 1. Left Shift Operator (<<)
+        // Write a program that declares an integer variable x, assigns the value 2 to it,
+        // prints out the binary string version of the number. Use the left shift operator
+        // (<<) to shift by 1 and assign the result to x. Predict the decimal value and
+        // binary string, then print out x in decimal and binary form. Perform the exercise with the following values:
+        // 9, 17, 88
 
-        int a = 2;
-        // Predicted: Decimal = 4, Binary = 100
-        a = a << 1;
-        System.out.println("2 << 1 : Decimal = " + a + ", Binary = " + Integer.toBinaryString(a));
-        a = 9;
-        // Predicted: Decimal = 18, Binary = 10010
-        a = a << 1;
-        System.out.println("9 << 1 : Decimal = " + a + ", Binary = " + Integer.toBinaryString(a));
-        a = 17;
-        // Predicted: Decimal = 34, Binary = 100010
-        a = a << 1;
-        System.out.println("17 << 1 : Decimal = " + a + ", Binary = " + Integer.toBinaryString(a));
-        a = 88;
-        // Predicted: Decimal = 176, Binary = 10110000
-        a = a << 1;
-        System.out.println("88 << 1 : Decimal = " + a + ", Binary = " + Integer.toBinaryString(a));
-        System.out.println("******************************************************");
+        int x = 2;
+        System.out.println("Initial value of x: " + x);
+        System.out.println("Binary: " + Integer.toBinaryString(x));
 
-        // Right Shift operator
-        int b = 150;
-        // Predicted: Decimal = 37, Binary = 100101
-        a = b >> 2;
-        System.out.println("150 >> 2 : Decimal = " + b + ", Binary = " + Integer.toBinaryString(a));
+        x = x << 1;
+        System.out.println("After left shift by 1:");
+        System.out.println("Decimal: " + x);
+        System.out.println("Binary: " + Integer.toBinaryString(x));
+        System.out.println();
 
-        b = 225;
-        // Predicted: Decimal = 56, Binary = 111000
-        b = b >> 2;
-        System.out.println("225 >> 1 : Decimal = " + a + ", Binary = " + Integer.toBinaryString(a));
+        // Value is 9
+        x = 9;
+        System.out.println("Initial value of x: " + x);
+        System.out.println("Binary: " + Integer.toBinaryString(x));
 
-        b = 1555;
-        // Predicted: Decimal = 388, Binary = 110000100
-        b = b >> 2;
-        System.out.println("1555 >> 2 : Decimal = " + a + ", Binary = " + Integer.toBinaryString(a));
+        x = x << 1;
+        System.out.println("After left shift by 1:");
+        System.out.println("Decimal: " + x);
+        System.out.println("Binary: " + Integer.toBinaryString(x));
+        System.out.println();
 
-        b = 32456;
-        // Predicted: Decimal = 176, Binary = 10110000
-        b = b >> 2;
-        System.out.println("32456 >> 2 : Decimal = " + a + ", Binary = " + Integer.toBinaryString(a));
-        System.out.println("******************************************************");
+        // Value is 17
+        x = 17;
+        System.out.println("Initial value of x: " + x);
+        System.out.println("Binary: " + Integer.toBinaryString(x));
 
-        // bitwise AND (&) operation
+        x = x << 1;
+        System.out.println("After left shift by 1:");
+        System.out.println("Decimal: " + x);
+        System.out.println("Binary: " + Integer.toBinaryString(x));
+        System.out.println();
 
-        int A = 7; // Binary = 0111
-        int B = 17; // Binary = 10001
-        // Predicted: z = 1, Binary = 00001
-        int C = A & B;
-        System.out.println("A & B : Decimal = " + C + ", Binary = " + Integer.toBinaryString(C));
-        System.out.println("******************************************************");
+        // Value is 88
+        x = 88;
+        System.out.println("Initial value of x: " + x);
+        System.out.println("Binary: " + Integer.toBinaryString(x));
 
-        // bitwise OR (|) operation
+        x = x << 1;
+        System.out.println("After left shift by 1:");
+        System.out.println("Decimal: " + x);
+        System.out.println("Binary: " + Integer.toBinaryString(x));
 
-        int a2 = 7; // Binary = 0111
-        int b2 = 17; // Binary = 10001
-        // Predicted: z = 23, Binary = 10111
-        int c2 = a2 | b2;
-        System.out.println("a2 | b2 : Decimal = " + c2 + ", Binary = " + Integer.toBinaryString(c2));
-        System.out.println("******************************************************");
+        // 2. Right Shift Operator (>>)
+        // Perform the right shift operation and predict the decimal and binary values.
+        // Do this for the values 150, 225, 1555, 32456.
 
-        // postfix increment (a3++)
+        int x2 = 150;
+        System.out.println("Initial value of x: " + x2);
+        System.out.println("Binary: " + Integer.toBinaryString(x2));
 
-        int a3 = 10;
-        System.out.println("Before increment: " + a3);
-        a3++;
-        System.out.println("After increment: " + a3);
-        System.out.println("******************************************************");
+        x2 = x2 >> 2;
+        System.out.println("After right shift by 2:");
+        System.out.println("Decimal: " + x2);
+        System.out.println("Binary: " + Integer.toBinaryString(x2));
+        System.out.println();
 
-        // multiple ways to increment
+        // Value is 225
+        x2 = 225;
+        System.out.println("Initial value of x: " + x2);
+        System.out.println("Binary: " + Integer.toBinaryString(x2));
 
-        int a4 = 5;
-        System.out.println("Initial value: " + a4);
+        x2 = x2 >> 2;
+        System.out.println("After right shift by 2:");
+        System.out.println("Decimal: " + x2);
+        System.out.println("Binary: " + Integer.toBinaryString(x2));
+        System.out.println();
 
-        // Method 1: Using a++
-        a4++;
-        System.out.println("After a++: " + a4);
+        // Value is 1555
+        x2 = 1555;
+        System.out.println("Initial value of x: " + x2);
+        System.out.println("Binary: " + Integer.toBinaryString(x2));
 
-        // Method 2: Using ++a
-        ++a4;
-        System.out.println("After ++a4: " + a4);
+        x2 = x2 >> 2;
+        System.out.println("After right shift by 2:");
+        System.out.println("Decimal: " + x2);
+        System.out.println("Binary: " + Integer.toBinaryString(x2));
+        System.out.println();
 
-        // Method 3: Using a = a + 1
-        a4 = a4 + 1;
-        System.out.println("After a4 = a4 + 1: " + a4);
-        System.out.println("******************************************************");
+        // Value is 32456
+        x2 = 32456;
+        System.out.println("Initial value of x: " + x2);
+        System.out.println("Binary: " + Integer.toBinaryString(x2));
 
-        // difference between prefix and postfix increment
+        x2 = x2 >> 2;
+        System.out.println("After right shift by 2:");
+        System.out.println("Decimal: " + x2);
+        System.out.println("Binary: " + Integer.toBinaryString(x2));
 
-        int a5 = 5;
-        int b5 = 8;
+        // 3. Bitwise AND Operation
+        // Perform a bitwise AND operation between two integers x and y, and predict the result.
+        int x3 = 7;
+        int y3 = 17;
+        int z3 = x3 & y3;
 
-        // Using prefix increment (++a)
-        int total = ++a5 + b5;
-        System.out.println("Using prefix (++a5): Sum = " + total + ", a5 = " + a5); // Sum = 14
+        System.out.println("x in decimal: " + x3 + " and binary: " + Integer.toBinaryString(x3));
+        System.out.println("y in decimal: " + y3 + " and binary: " + Integer.toBinaryString(y3));
+        System.out.println("z (x & y) in decimal: " + z3 + " and binary: " + Integer.toBinaryString(z3));
 
-        // Resetting a
-        a5 = 5;
+        // 4. Bitwise OR Operation
+        // Perform a bitwise OR operation between the same x and y values.
+        z3 = x3 | y3;
+        System.out.println("x in decimal: " + x3 + " and binary: " + Integer.toBinaryString(x3));
+        System.out.println("y in decimal: " + y3 + " and binary: " + Integer.toBinaryString(y3));
+        System.out.println("z (x | y) in decimal: " + z3 + " and binary: " + Integer.toBinaryString(z3));
 
-        // Using postfix increment (a5++)
-        total = a5++ + b5;
-        System.out.println("Using postfix (a5++): Sum = " + total + ", a5 = " + a5); // Sum = 13
+        // 5. Postfix Increment Operator
+        // Use a postfix increment operator to increase an integer value.
+        int number5 = 10;
+        System.out.println("Before increment: " + number5);
+        number5++;
+        System.out.println("After increment: " + number5);
 
+        // 6. Multiple Increment Methods
+        // Demonstrate three different ways to increment a variable by 1.
+        int number6 = 5;
+        System.out.println("Initial value: " + number6);
+        number6++;
+        System.out.println("After number6++: " + number6);
+        ++number6;
+        System.out.println("After ++number6: " + number6);
+        number6 += 1;
+        System.out.println("After number6 += 1: " + number6);
+
+        // 7. Prefix vs Postfix Increment
+        // Demonstrate the difference between prefix and postfix increment operators.
+        int x7 = 5;
+        int y7 = 8;
+        int sum7 = ++x7 + y7;
+        System.out.println("Using prefix increment (++x7):");
+        System.out.println("x7: " + x7);
+        System.out.println("y7: " + y7);
+        System.out.println("Sum: " + sum7);
+
+        x7 = 5;
+        sum7 = x7++ + y7;
+        System.out.println("Using postfix increment (x7++):");
+        System.out.println("x7: " + x7);
+        System.out.println("y7: " + y7);
+        System.out.println("Sum: " + sum7);
     }
 }
