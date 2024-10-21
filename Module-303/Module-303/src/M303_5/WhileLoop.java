@@ -6,41 +6,35 @@ public class WhileLoop {
 
     public static void main(String[] args) {
 
-        //this would create a Infinite Loop
-        // while (true) {
-        //    System.out.println("Inside while loop !");
-        // }
+        // this would create an infinite loop
+//        while ( true ) {
+//            System.out.println("Inside while loop.");
+//        }
 
-        //while Loops have some condition
+
+        // while loops have some kind of condition
+        // this is very similar to a for loop and really a for loop is better than
         String word = "abcdefg";
         int pos = 0;
         while (pos < word.length()) {
             pos = pos + 1;
-            System.out.print("Inside while loop ");
+            System.out.println("Inside while loop.");
         }
 
-        while (true) {
-            System.out.println("Inside while condition true");
-        }
-       // boolean c = true;
-        //while (c) {
-            //this code can never execute because the conditions on the while loop will
-            //get checked and not enter the code
-     //       System.out.println("Inside while condition false");
-     //   }
-        //Great Example for While Loops
-      //  boolean success = false;
-       // while (!success) {
-            //make an api call attempt
-            //if ( apicall = true ) {
-            //   success = true;
-            /// }
+        boolean c = false;
+        while (c) {
+            // this code can never execute because the condition on the while loop will
+            // get checked and not enter the code
+            System.out.println("Inside while codition false");
         }
 
-        // DO WHILE
-     //   int x = 5;
-   //     do{
-    //        System.out.println("Inside do while");
-   //     } while (x < 5);
- //   }
+        // run the code at least one time before checking exit condition
+        int x = 5;
+        do {
+            System.out.println("Inside do while");
+            x = x + 1;
+        } while (x < 5);
+
+
+    }
 }
