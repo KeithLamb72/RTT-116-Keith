@@ -30,7 +30,7 @@ public class GLAB_303_13_2 {
             ByteBuffer buffer = ByteBuffer.allocate((int) inputChannel.size());
 
             while (inputChannel.read(buffer) > 0) {
-                buffer.flip();  // Prepare buffer for reading
+                buffer.flip();  // Prepare buffer for reading // Flip Stack
                 while (buffer.hasRemaining()) {
                     targetChannel.write(buffer);  // Write buffer content to the target channel
                 }
